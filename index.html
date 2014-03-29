@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+  <script src="scripts.js"></script>
+</head>
+<body ng-app="myApp">
+
+  <div ng-controller="FirstCtrl" >
+    <input ng-model='data.message'>
+    <h1>{{data.message}}</h1>
+  </div>
+
+  <div ng-controller="SecondCtrl" >
+    <input ng-model='data.message'>
+    <h1>{{data.message}}</h1>
+  </div>
+
+</body>
+</html>
