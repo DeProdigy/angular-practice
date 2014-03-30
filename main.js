@@ -84,17 +84,17 @@
 var app = angular.module('behaviorApp', []);
 
 app.directive('enter', function() {
-  return function(scope, element) {
+  return function(scope, element, attrs) {
       element.bind('mouseenter', function(){
-        console.log('Moused Over: '+ $(this).text());
+        element.addClass(attrs.enter);
       });
     };
 });
 
 app.directive('leave', function() {
-  return function(scope, element) {
+  return function(scope, element, attrs) {
       element.bind('mouseleave', function(){
-        console.log('Out of: '+ $(this).text());
+        element.removeClass(attrs.enter);
       });
     };
 });
