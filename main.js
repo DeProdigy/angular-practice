@@ -38,15 +38,43 @@
 // #10
 var app = angular.module('superhero', []);
 
+// element
+// app.directive('superman', function(){
+//   return {
+//     restrict: 'E',
+//     template: "<div>Here I am to save the day.</div>"
+//   };
+// });
+
+//attribute
+// app.directive('superman', function(){
+//   return {
+//     restrict: 'A',
+//     link: function() {
+//       alert("I'm working");
+//     }
+//   };
+// });
+
+//class
 app.directive('superman', function(){
   return {
-    restrict: 'E',
-    template: "<div>Here I am to save the day.</div>"
+    restrict: 'C',
+    link: function() {
+      alert("I'm working");
+    }
   };
 });
 
-
-
+//comment
+app.directive('superman', function(){
+  return {
+    restrict: 'M',
+    link: function() {
+      alert("I'm working");
+    }
+  };
+});
 
 
 
