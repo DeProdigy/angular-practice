@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
-  <script src="scripts.js"></script>
+  <script src="main.js"></script>
 </head>
 <body ng-app="myApp">
 
-  <div ng-controller="FirstCtrl" >
+<!--   <div ng-controller="FirstCtrl" >
     <input ng-model='data.message'>
     <h1>{{data.message}}</h1>
   </div>
@@ -14,6 +14,16 @@
   <div ng-controller="SecondCtrl" >
     <input ng-model='data.message'>
     <h1>{{data.message | reverse}}</h1>
+  </div> -->
+
+  <div ng-controller="AvengersCtrl" >
+    <input type="text" ng-model='searchAvengers'>
+    <table>
+      <tr ng-repeat='actor in avengers.cast | filter:searchAvengers'>
+        <td>{{actor.name}}</td>
+        <td>{{actor.character}}</td>
+      </tr>
+    </table>
   </div>
 
 </body>
