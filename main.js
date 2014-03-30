@@ -35,8 +35,10 @@
 //   $scope.avengers = Avengers;
 // }
 
+
+
 // #10
-var app = angular.module('superhero', []);
+// var app = angular.module('superhero', []);
 
 // element
 // app.directive('superman', function(){
@@ -57,24 +59,46 @@ var app = angular.module('superhero', []);
 // });
 
 //class
-app.directive('superman', function(){
-  return {
-    restrict: 'C',
-    link: function() {
-      alert("I'm working");
-    }
-  };
+// app.directive('superman', function(){
+//   return {
+//     restrict: 'C',
+//     link: function() {
+//       alert("I'm working");
+//     }
+//   };
+// });
+
+// //comment
+// app.directive('superman', function(){
+//   return {
+//     restrict: 'M',
+//     link: function() {
+//       alert("I'm working");
+//     }
+//   };
+// });
+
+
+
+//12
+var app = angular.module('behaviorApp', []);
+
+app.directive('enter', function() {
+  return function(scope, element) {
+      element.bind('mouseenter', function(){
+        console.log('Moused Over: '+ $(this).text());
+      });
+    };
 });
 
-//comment
-app.directive('superman', function(){
-  return {
-    restrict: 'M',
-    link: function() {
-      alert("I'm working");
-    }
-  };
+app.directive('leave', function() {
+  return function(scope, element) {
+      element.bind('mouseleave', function(){
+        console.log('Out of: '+ $(this).text());
+      });
+    };
 });
+
 
 
 
