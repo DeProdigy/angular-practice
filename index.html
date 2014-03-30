@@ -4,7 +4,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
   <script src="main.js"></script>
 </head>
-<body ng-app="myApp">
+<!-- <body ng-app="myApp"> -->
 
 <!--   <div ng-controller="FirstCtrl" >
     <input ng-model='data.message'>
@@ -16,7 +16,7 @@
     <h1>{{data.message | reverse}}</h1>
   </div> -->
 
-  <div ng-controller="AvengersCtrl" >
+<!--   <div ng-controller="AvengersCtrl" >
     <input type="text" ng-model='searchAvengers'>
     <table>
       <tr ng-repeat='actor in avengers.cast | filter:searchAvengers | orderBy: "-name" | limitTo:4 '>
@@ -24,7 +24,15 @@
         <td>{{actor.character | uppercase}}</td>
       </tr>
     </table>
-  </div>
+  </div> -->
 
+<!-- </body> -->
+
+<body>
+  <div ng-app='superhero'>
+    <superman></superman>
+  </div>
 </body>
+
+
 </html>

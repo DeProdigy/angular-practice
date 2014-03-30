@@ -1,4 +1,4 @@
-var myApp = angular.module("myApp", []);
+// var myApp = angular.module("myApp", []);
 // myApp.factory('Data', function() {
 //   return {message: "I'm data from a service"};
 // });
@@ -17,22 +17,37 @@ var myApp = angular.module("myApp", []);
 //   $scope.data = Data;
 // }
 
-myApp.factory('Avengers', function() {
-  var Avengers = {};
+// myApp.factory('Avengers', function() {
+//   var Avengers = {};
 
-  Avengers.cast = [
-    {name: 'Alex', character: 'The Other'},
-    {name: 'Rob', character: 'Loki'},
-    {name: 'Dan', character: 'Ronni'},
-    {name: 'John', character: 'Bum'},
-    {name: 'Steve', character: 'Nick Fury'}
-  ];
+//   Avengers.cast = [
+//     {name: 'Alex', character: 'The Other'},
+//     {name: 'Rob', character: 'Loki'},
+//     {name: 'Dan', character: 'Ronni'},
+//     {name: 'John', character: 'Bum'},
+//     {name: 'Steve', character: 'Nick Fury'}
+//   ];
 
-  return Avengers;
+//   return Avengers;
+// });
+
+// function AvengersCtrl($scope, Avengers) {
+//   $scope.avengers = Avengers;
+// }
+
+// #10
+var app = angular.module('superhero', []);
+
+app.directive('superman', function(){
+  return {
+    restrict: 'E',
+    template: "<div>Here I am to save the day.</div>"
+  };
 });
 
-function AvengersCtrl($scope, Avengers) {
-  $scope.avengers = Avengers;
-}
+
+
+
+
 
 
