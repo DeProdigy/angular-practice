@@ -81,25 +81,45 @@
 
 
 //12
-var app = angular.module('behaviorApp', []);
+// var app = angular.module('behaviorApp', []);
 
-app.directive('enter', function() {
-  return function(scope, element, attrs) {
-      element.bind('mouseenter', function(){
-        element.addClass(attrs.enter);
-      });
-    };
+// app.directive('enter', function() {
+//   return function(scope, element, attrs) {
+//       element.bind('mouseenter', function(){
+//         element.addClass(attrs.enter);
+//       });
+//     };
+// });
+
+// app.directive('leave', function() {
+//   return function(scope, element, attrs) {
+//       element.bind('mouseleave', function(){
+//         element.removeClass(attrs.enter);
+//       });
+//     };
+// });
+
+
+// 14
+var app = angular.module('twitterApp', []);
+
+app.controller("AppCtrl", function($scope){
+  $scope.loadMoreTweets = function() {
+    alert('Loading Tweets!');
+  };
+
+  $scope.deleteTweets = function() {
+    alert('Deleting Tweets!');
+  };
 });
 
-app.directive('leave', function() {
-  return function(scope, element, attrs) {
-      element.bind('mouseleave', function(){
-        element.removeClass(attrs.enter);
-      });
-    };
+app.directive('enter', function(){
+  return function(scope, element, attrs){
+    element.bind('mouseenter', function(){
+      scope.$apply(attrs.enter);
+    });
+  };
 });
-
-
 
 
 
